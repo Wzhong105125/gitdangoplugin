@@ -26,6 +26,7 @@ namespace KeyProviderTest
         String Message;
         int createorlogin,number,portrandom=8000;
         static byte[] entropy = { 9, 8, 7, 6, 5 };
+        String randomnumber;
 
         public Boolean Access()
         {
@@ -82,7 +83,7 @@ namespace KeyProviderTest
             FileStream fStream = new FileStream(filename, FileMode.Open);
             byte[] decryptData = DecryptDataFromStream(entropy, DataProtectionScope.CurrentUser, fStream,2048);
             String privatekey = Encoding.Default.GetString(decryptData);
-            txtStatus.Text += "\r\n key:" + privatekey;
+  //          txtStatus.Text += "\r\n key:" + privatekey;
             return privatekey;
         }
 
@@ -147,11 +148,22 @@ namespace KeyProviderTest
         {
             txtStatus.Invoke((MethodInvoker)delegate ()
             {
-                txtStatus.Text += e.MessageString;
+                txtStatus.Text +="\r\ntext:"+ e.MessageString;
                 if (e.MessageString == "123")
                 {
-                    Message = e.MessageString;
+                    randomnumber = GenerateRandom();
+                    server.Broadcast(randomnumber);
+                    Message = e.MessageString;      
+                }
+                else if(CheckRandom(e.MessageString) == true)
+                {
+                    
                     FingerPrintCheck = true;
+                    Close();
+                }
+                else
+                {
+                    FingerPrintCheck = false;
                     Close();
                 }
                 
@@ -159,6 +171,37 @@ namespace KeyProviderTest
             });
         }
 
+        private Boolean CheckRandom(String encryptrandom)
+        {
+            var privatekey = ReadPrivatekey();
+            var rsa = new RSACryptoServiceProvider();
+            var dataArray = encryptrandom.Split(new char[] { ',' });
+            byte[] dataByte = new byte[dataArray.Length];
+            for (int i = 0; i < dataArray.Length; i++)
+            {
+                dataByte[i] = Convert.ToByte(dataArray[i]);
+            }
+            rsa.FromXmlString(privatekey);
+            var decryptrandom = rsa.Decrypt(dataByte, false);
+            if (randomnumber == decryptrandom.ToString())
+                return true;
+            else
+                return false;
+        }
+        private String GenerateRandom()
+        {
+            string s = "";
+            int i, number;
+            Random rnd = new Random();
+            for (i = 0; i < 64; i++)
+            {
+                number = rnd.Next(0, 9);
+                byte[] bb = BitConverter.GetBytes(number);
+                s = s + number.ToString();
+            }
+            randomnumber = s;
+            return s;
+        }
 
 
 

@@ -8,7 +8,7 @@
 	</Meta>
 	<Application>
 		<LanguageFile>Chinese_Traditional.lngx</LanguageFile>
-		<LastUpdateCheck>2019-09-06T07:35:19Z</LastUpdateCheck>
+		<LastUpdateCheck>2019-09-09T03:02:10Z</LastUpdateCheck>
 		<LastUsedFile>
 			<Path>test1.kdbx</Path>
 			<CredProtMode>Obf</CredProtMode>
@@ -58,6 +58,17 @@
 			<Triggers />
 		</TriggerSystem>
 		<PluginCompatibility>
+			<Item>@HMaJvZfwNMTxgo+7lLqnN8kI42EWoSPK1Jjm3u0iPcY=@2.42.1.23464@1</Item>
+			<Item>@jHNs+AIoF69QWwCgK53msbsDkbGJPdjZiDyMyo5J+Ww=@2.42.1.23464@1</Item>
+			<Item>@smwpopmNIj43hqjn7ic7v7h9niutEy51Hse89HA5X68=@2.42.1.23464@1</Item>
+			<Item>@h1wey4cn0e0Nuv5+yHRbDPSurlkPcQx8tM6U/th/Bs4=@2.42.1.23464@1</Item>
+			<Item>@fF2Epcb1oZ7uwxhgCIKuZi0D5kNnhArr0PxR+XAuFis=@2.42.1.23464@1</Item>
+			<Item>@WGUm11R4/f8qzpkezUzpmWMrQNoijn353SL4F09wA/k=@2.42.1.23464@1</Item>
+			<Item>@EVoyl8u+5agH23SKFIazuQ40+GqHc6xpU2AdKkVIo2U=@2.42.1.23464@1</Item>
+			<Item>@dKu0sLI8x+HbqevFlVnQR36ECv5TRIwNkwc2d1tGqEc=@2.42.1.23464@1</Item>
+			<Item>@K6FUIsh8FRFShrNz6lite3cATf1HrP3in6f0pPWfBWA=@2.42.1.23464@1</Item>
+			<Item>@3X04+ePC/7SiAPrtT6XtDi276FxM61+u9Jkpr9GsMd8=@2.42.1.23464@1</Item>
+			<Item>@l/x/bAygMtWr3EKN+stlUjwRfsw+fqndo2/CPJ9N7bw=@2.42.1.23464@1</Item>
 			<Item>@VN7HODu1iA6snmlJbIM47lpWf84f0WiOWMfpLq15o9I=@2.42.1.23464@1</Item>
 			<Item>@ONqek5YdnjDXRXoG/xB/LFrYnlpBZ287vnDvR+Pe5O8=@2.42.1.23464@1</Item>
 			<Item>@xbZK5MAHOlxV8LzYYwOxb20PdUuFkDxsDJhYD1jBZ/w=@2.42.1.23464@1</Item>
@@ -111,17 +122,6 @@
 			<Item>@teS0Hhll/9jlqm12gSXiDRPgSHM4H1Ugcv4zXT0cjls=@2.42.1.23464@1</Item>
 			<Item>@LhnOOVQ6rWP0t5bKj5+6qiO4npsHjIuC0rfsRVnVxkc=@2.42.1.23464@1</Item>
 			<Item>@A2XLIhF956gWC6a2i8sfcE5+nbxRpHqbGmt99d0eTQw=@2.42.1.23464@1</Item>
-			<Item>@sBjgVZvSG6YXjML/L2mAaM8h6UG0ZHz7kIwhdTRfLEc=@2.42.1.23464@1</Item>
-			<Item>@Z0BUyUlOeaRXdqqBYqhz1FijrMjfBLWpk9DeYSVmq94=@2.42.1.23464@1</Item>
-			<Item>@skKFdLuXdXkO/ktvGrGl1TLigOeGnHRMZnm/2L98bTU=@2.42.1.23464@1</Item>
-			<Item>@VeiOQAlUZCzqGMjGHxOyL1dV1C5m9F2mQAa/7gPVYUo=@2.42.1.23464@1</Item>
-			<Item>@r2NsH664QVHTHaWQRCwtu1xDnRYyIdDiSsLSLQlOLYM=@2.42.1.23464@1</Item>
-			<Item>@Zg8p+SXQs33RcfTQrAET9OYGjHP0fNL3ItBfgEdfVBY=@2.42.1.23464@1</Item>
-			<Item>@vL6k50xi7KYjYqhZY35np4wCHiHgqwaYCbiwGzNEoLg=@2.42.1.23464@1</Item>
-			<Item>@r/N5O8eWeTEM0S41k7+/rsb8nkto2lDTfjbKbUWyy70=@2.42.1.23464@1</Item>
-			<Item>@gzKbDiTCwevv+JQr4jIGXkU7YvDuia/RSAuqF8EWLlk=@2.42.1.23464@1</Item>
-			<Item>@yT1KJKSSnTBaVXauoia6qccW46Rf08zZ781lTbu7Tsw=@2.42.1.23464@1</Item>
-			<Item>@7PvIt5xRfwXWHnfpDbPPIrfzOLkNaBvgT/KxFoPPU0I=@2.42.1.23464@1</Item>
 		</PluginCompatibility>
 	</Application>
 	<Logging />

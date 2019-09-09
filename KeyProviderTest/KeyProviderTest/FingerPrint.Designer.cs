@@ -38,7 +38,7 @@
             this.txtStatus.Location = new System.Drawing.Point(29, 277);
             this.txtStatus.Multiline = true;
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(622, 105);
+            this.txtStatus.Size = new System.Drawing.Size(622, 214);
             this.txtStatus.TabIndex = 0;
             // 
             // pictureBox1
@@ -53,7 +53,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 394);
+            this.ClientSize = new System.Drawing.Size(663, 503);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtStatus);
             this.Name = "FingerPrint";

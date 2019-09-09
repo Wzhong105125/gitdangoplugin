@@ -27,7 +27,8 @@ namespace KeyProviderTest
         int createorlogin,number,portrandom=8000;
         static byte[] entropy = { 9, 8, 7, 6, 5 };
         String randomnumber;
-
+        byte[] randombuffer;
+        String privatekey;
         public Boolean Access()
         {
             
@@ -71,7 +72,7 @@ namespace KeyProviderTest
             txtStatus.Text += "Server Start...";
             txtStatus.Text += "\r\n" + ipAddr+"port"+portrandom ;
             QRcodeGenerater(ipAddr,portrandom);
-            String privatekey = ReadPrivatekey();
+            privatekey = ReadPrivatekey();
             
             
         }
@@ -83,7 +84,7 @@ namespace KeyProviderTest
             FileStream fStream = new FileStream(filename, FileMode.Open);
             byte[] decryptData = DecryptDataFromStream(entropy, DataProtectionScope.CurrentUser, fStream,2048);
             String privatekey = Encoding.Default.GetString(decryptData);
-  //          txtStatus.Text += "\r\n key:" + privatekey;
+    //       txtStatus.Text += "\r\n key:" + privatekey;
             return privatekey;
         }
 
@@ -148,58 +149,66 @@ namespace KeyProviderTest
         {
             txtStatus.Invoke((MethodInvoker)delegate ()
             {
-                txtStatus.Text +="\r\ntext:"+ e.MessageString;
                 if (e.MessageString == "123")
                 {
                     randomnumber = GenerateRandom();
-                    server.Broadcast(randomnumber);
-                    Message = e.MessageString;      
-                }
-                else if(CheckRandom(e.MessageString) == true)
+                    server.Broadcast(randombuffer);
+                    Message = e.MessageString;
+                    txtStatus.Text += "\r\nbroadcast: " + randomnumber;
+                }else
                 {
-                    
-                    FingerPrintCheck = true;
-                    Close();
-                }
-                else
-                {
-                    FingerPrintCheck = false;
-                    Close();
+  //                privatekey = ReadPrivatekey();
+                    txtStatus.Text += "\r\nreceived:" + e.MessageString+"\r\n length:"+System.Text.Encoding.Default.GetByteCount(e.MessageString);
+                    byte[] aa = Encoding.UTF8.GetBytes(e.MessageString);
+                    Boolean k = CheckRandom(aa);
+                    if (k == true)
+                        FingerPrintCheck = true;
+                    else
+                        FingerPrintCheck = false;
+  //                  Close();
                 }
                 
                // e.ReplyLine(string.Format("You Said: {0}",e.MessageString));
             });
         }
 
-        private Boolean CheckRandom(String encryptrandom)
+        private Boolean CheckRandom(byte[] encryptrandom)
         {
-            var privatekey = ReadPrivatekey();
-            var rsa = new RSACryptoServiceProvider();
-            var dataArray = encryptrandom.Split(new char[] { ',' });
-            byte[] dataByte = new byte[dataArray.Length];
-            for (int i = 0; i < dataArray.Length; i++)
-            {
-                dataByte[i] = Convert.ToByte(dataArray[i]);
-            }
+            RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
+            String decryptedrandom ="";
+            Boolean kkk = true;
             rsa.FromXmlString(privatekey);
-            var decryptrandom = rsa.Decrypt(dataByte, false);
-            if (randomnumber == decryptrandom.ToString())
+            
+            try{
+                decryptedrandom = Encoding.UTF8.GetString(rsa.Decrypt(encryptrandom, false));
+                txtStatus.Text += "\r\ndecrypted" + decryptedrandom;
+            }
+            catch(Exception e)
+            {
+                txtStatus.Text += "\r\nerror:" +e.ToString();
+            }      
+
+            if (decryptedrandom.Equals(randomnumber))
                 return true;
             else
                 return false;
+            
+            
         }
         private String GenerateRandom()
         {
             string s = "";
             int i, number;
             Random rnd = new Random();
-            for (i = 0; i < 64; i++)
+            for (i = 0; i < 16; i++)
             {
                 number = rnd.Next(0, 9);
                 byte[] bb = BitConverter.GetBytes(number);
                 s = s + number.ToString();
             }
             randomnumber = s;
+            randombuffer = Encoding.UTF8.GetBytes(s+"\r\n");
+  //          txtStatus.Text += "\r\nrandom:" + s;
             return s;
         }
 

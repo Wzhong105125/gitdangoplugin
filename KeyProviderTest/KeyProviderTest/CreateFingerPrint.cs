@@ -78,7 +78,7 @@ namespace KeyProviderTest
 
             txtStatus.Text += "Server Start...";
             txtStatus.Text += "\r\n" + ipAddr + "port" + portrandom;
-            //txtStatus.Text += "\r\npublic key:" +System.Text.Encoding.Default.GetBytes(publickey).Length+"\r\n"+publickey;
+            txtStatus.Text += "\r\npublic key:" +System.Text.Encoding.Default.GetBytes(publickey).Length+"\r\n"+publickey;
             QRcodeGenerater(ipAddr, portrandom);
             storeprivatekey(privatekey);
 

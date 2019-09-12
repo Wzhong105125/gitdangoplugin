@@ -8,7 +8,7 @@
 	</Meta>
 	<Application>
 		<LanguageFile>Chinese_Traditional.lngx</LanguageFile>
-		<LastUpdateCheck>2019-09-09T03:02:10Z</LastUpdateCheck>
+		<LastUpdateCheck>2019-09-12T01:13:37Z</LastUpdateCheck>
 		<LastUsedFile>
 			<Path>test1.kdbx</Path>
 			<CredProtMode>Obf</CredProtMode>
@@ -58,6 +58,10 @@
 			<Triggers />
 		</TriggerSystem>
 		<PluginCompatibility>
+			<Item>@3CNW+/XBBPWkC7WuApHbrsxSICz/qGANZyvo9N5sRy8=@2.42.1.23464@1</Item>
+			<Item>@wp0T5uOA0X+kcDL/Q4FYxsmkFV9FOTGlNbOMjQmgLvw=@2.42.1.23464@1</Item>
+			<Item>@WePI0TX/Z1MQKPZ//y8BiisKbwwciLqlbNHDWj9CsCU=@2.42.1.23464@1</Item>
+			<Item>@sySF1qOtyxYBRYami7wESvJ/uep64GTPZ09UZPAy8hI=@2.42.1.23464@1</Item>
 			<Item>@HMaJvZfwNMTxgo+7lLqnN8kI42EWoSPK1Jjm3u0iPcY=@2.42.1.23464@1</Item>
 			<Item>@jHNs+AIoF69QWwCgK53msbsDkbGJPdjZiDyMyo5J+Ww=@2.42.1.23464@1</Item>
 			<Item>@smwpopmNIj43hqjn7ic7v7h9niutEy51Hse89HA5X68=@2.42.1.23464@1</Item>
@@ -118,10 +122,6 @@
 			<Item>@KBD56IEHVPlIYZIAi1IqllqkBnWU2xh9VIJ7h/KpMGg=@2.42.1.23464@1</Item>
 			<Item>@nRxJpHMdViRW5zubODiXHSSe3/a59oRs4INc5omFIBM=@2.42.1.23464@1</Item>
 			<Item>@ccfZlx+SJRDhwX7ICZbij5Dwx4v8s/o/5RQY78dh0V0=@2.42.1.23464@1</Item>
-			<Item>@7qcoHJOWQJBliZKrf3yrY7TBUc+bfxbp+1PGzweID7c=@2.42.1.23464@1</Item>
-			<Item>@teS0Hhll/9jlqm12gSXiDRPgSHM4H1Ugcv4zXT0cjls=@2.42.1.23464@1</Item>
-			<Item>@LhnOOVQ6rWP0t5bKj5+6qiO4npsHjIuC0rfsRVnVxkc=@2.42.1.23464@1</Item>
-			<Item>@A2XLIhF956gWC6a2i8sfcE5+nbxRpHqbGmt99d0eTQw=@2.42.1.23464@1</Item>
 		</PluginCompatibility>
 	</Application>
 	<Logging />

@@ -81,7 +81,17 @@ namespace KeyProviderTest
             txtStatus.Text += "\r\npublic key:" +System.Text.Encoding.Default.GetBytes(publickey).Length+"\r\n"+publickey;
             QRcodeGenerater(ipAddr, portrandom);
             storeprivatekey(privatekey);
+            storepublickey(publickey);
 
+        }
+
+        private void storepublickey(String publickey)
+        {
+            String filename = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\publickey.txt";
+            Directory.CreateDirectory(Path.GetDirectoryName(filename));
+            TextWriter tw = new StreamWriter(filename,true);
+            tw.WriteLine(publickey);
+            tw.Close();
 
         }
 

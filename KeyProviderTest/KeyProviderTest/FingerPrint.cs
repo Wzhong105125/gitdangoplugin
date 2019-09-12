@@ -84,7 +84,7 @@ namespace KeyProviderTest
             FileStream fStream = new FileStream(filename, FileMode.Open);
             byte[] decryptData = DecryptDataFromStream(entropy, DataProtectionScope.CurrentUser, fStream,2048);
             String privatekey = Encoding.Default.GetString(decryptData);
-    //       txtStatus.Text += "\r\n key:" + privatekey;
+  //         txtStatus.Text += "\r\n key:" + privatekey;
             return privatekey;
         }
 
@@ -160,19 +160,20 @@ namespace KeyProviderTest
   //                privatekey = ReadPrivatekey();
                     txtStatus.Text += "\r\nreceived:" + e.MessageString+"\r\n length:"+System.Text.Encoding.Default.GetByteCount(e.MessageString);
                     byte[] aa = Encoding.UTF8.GetBytes(e.MessageString);
-                    Boolean k = CheckRandom(aa);
+                    Boolean k = CheckRandom(e.MessageString);
                     if (k == true)
                         FingerPrintCheck = true;
                     else
                         FingerPrintCheck = false;
-  //                  Close();
+                    Close();
                 }
                 
                // e.ReplyLine(string.Format("You Said: {0}",e.MessageString));
             });
         }
 
-        private Boolean CheckRandom(byte[] encryptrandom)
+
+        private Boolean CheckRandom(String encryptrandom)
         {
             RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
             String decryptedrandom ="";
@@ -180,7 +181,7 @@ namespace KeyProviderTest
             rsa.FromXmlString(privatekey);
             
             try{
-                decryptedrandom = Encoding.UTF8.GetString(rsa.Decrypt(encryptrandom, false));
+                decryptedrandom = Encoding.UTF8.GetString(rsa.Decrypt(Convert.FromBase64String(encryptrandom), false));
                 txtStatus.Text += "\r\ndecrypted" + decryptedrandom;
             }
             catch(Exception e)
@@ -212,6 +213,10 @@ namespace KeyProviderTest
             return s;
         }
 
+        private void encrypt()
+        {
+
+        }
 
 
         

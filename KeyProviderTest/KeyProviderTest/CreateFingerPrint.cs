@@ -12,6 +12,7 @@ using System.Linq;
 using System.Net;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -25,10 +26,10 @@ namespace KeyProviderTest
             InitializeComponent();
         }
 
-        SimpleTcpServer server;
+ 
         Boolean FingerPrintCheck = false;
         String Message;
-        int createorlogin, number, portrandom = 8000;
+        int portrandom = 8000;
         byte[] publickeybuffer;
         static byte[] entropy = { 9, 8, 7, 6, 5 };
         public Boolean Access()
@@ -42,68 +43,34 @@ namespace KeyProviderTest
             RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
             string publickey = rsa.ToXmlString(false);
             string privatekey = rsa.ToXmlString(true);
-            publickey += "\r\n";
-            publickeybuffer = Encoding.UTF8.GetBytes(publickey);
-            //開啟server
-            IPAddress ipAddr = null;
-            IPAddress[] arrIP = Dns.GetHostAddresses(Dns.GetHostName());
-            foreach (IPAddress ip in arrIP)
-            {
-                if (System.Net.Sockets.AddressFamily.InterNetwork.Equals(ip.AddressFamily))
-                {
-                    ipAddr = ip;
-                }
-                else if (System.Net.Sockets.AddressFamily.InterNetworkV6.Equals(ip.AddressFamily))
-                {
-                    ipAddr = ip;
-                }
-            }
-            server = new SimpleTcpServer();
-
-            server.Delimiter = 0x13;
-            server.StringEncoder = Encoding.UTF8;
-            server.DataReceived += Data_Receceived;
-            try
-            {
-                server.Start(ipAddr, portrandom);
-            }
-            catch (Exception error)
-            {
-                txtStatus.Text += "\r\n" + error.Message.ToString();
-                Random rnd = new Random();
-                int random = rnd.Next(1, 100);
-                portrandom += random;
-                server.Start(ipAddr, portrandom);
-            }
-
-            txtStatus.Text += "Server Start...";
-            txtStatus.Text += "\r\n" + ipAddr + "port" + portrandom;
-            txtStatus.Text += "\r\npublic key:" +System.Text.Encoding.Default.GetBytes(publickey).Length+"\r\n"+publickey;
-            QRcodeGenerater(ipAddr, portrandom);
-            storeprivatekey(privatekey);
+            string index = privatekey.Substring(privatekey.IndexOf("<Modulus>")+9, 5);
+            
+            QRcodeGenerater(index,privatekey);
             storepublickey(publickey);
+            
 
         }
+
+        
 
         private void storepublickey(String publickey)
         {
-            String filename = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\publickey.txt";
-            Directory.CreateDirectory(Path.GetDirectoryName(filename));
-            TextWriter tw = new StreamWriter(filename,true);
-            tw.WriteLine(publickey);
-            tw.Close();
-
-        }
-
-        private void storeprivatekey(String privatekey)
-        {
-            String filename = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\privatekey.dat";
-            Directory.CreateDirectory(Path.GetDirectoryName(filename));
-            byte[] toEncrypt = UnicodeEncoding.ASCII.GetBytes(privatekey);
-            FileStream fStream = new FileStream(filename, FileMode.OpenOrCreate);
-            int bytesWritten = EncryptDataToStream(toEncrypt, entropy, DataProtectionScope.CurrentUser, fStream);
-            txtStatus.Text +="\r\n"+filename;
-            fStream.Close();
+            try
+            {
+                String filename = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\publickey.dat";
+                Directory.CreateDirectory(Path.GetDirectoryName(filename));
+                byte[] toEncrypt = UnicodeEncoding.ASCII.GetBytes(publickey);
+                FileStream fStream = new FileStream(filename, FileMode.OpenOrCreate);
+                int bytesWritten = EncryptDataToStream(toEncrypt, entropy, DataProtectionScope.CurrentUser, fStream);
+                txtStatus.Text += "\r\n" + filename;
+                fStream.Close();
+                FingerPrintCheck = true;
+            }
+            catch(Exception e)
+            {
+                txtStatus.Text += e.ToString();
+            }
+            
         }
 
         public static int EncryptDataToStream(byte[] Buffer, byte[] Entropy, DataProtectionScope Scope, Stream S)
@@ -137,12 +104,17 @@ namespace KeyProviderTest
 
         }
 
-        private void QRcodeGenerater(IPAddress ip, int portrandom)
+        private void Close_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void QRcodeGenerater(string index,string privatekey)
         {
             MessagingToolkit.QRCode.Codec.QRCodeEncoder QREncoder = new MessagingToolkit.QRCode.Codec.QRCodeEncoder();
             String ipString;
 
-            ipString = "Cip:" + ip.ToString() + "port:" + portrandom;
+            ipString = "C"+index+"key:" +privatekey.ToString();
 
             // 2.大小
             QREncoder.QRCodeScale = 8;
@@ -157,7 +129,7 @@ namespace KeyProviderTest
             pictureBox1.Image = bitmap;
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
         }
-
+/*
         private void Data_Receceived(object sender, SimpleTCP.Message e)
         {
             txtStatus.Invoke((MethodInvoker)delegate ()
@@ -174,7 +146,7 @@ namespace KeyProviderTest
                 // e.ReplyLine(string.Format("You Said: {0}",e.MessageString));
             });
         }
-
+*/
 
     }
 }

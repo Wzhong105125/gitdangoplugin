@@ -24,11 +24,11 @@ namespace KeyProviderTest
         SimpleTcpServer server;
         Boolean FingerPrintCheck = false;
         String Message;
-        int createorlogin,number,portrandom=8000;
+        int portrandom=8000;
         static byte[] entropy = { 9, 8, 7, 6, 5 };
         String randomnumber;
         byte[] randombuffer;
-        String privatekey;
+        String publickey;
         public Boolean Access()
         {
             
@@ -64,28 +64,31 @@ namespace KeyProviderTest
             {
                 txtStatus.Text += "\r\n" + error.Message.ToString() ;
                 Random rnd = new Random();
-                int random = rnd.Next(1, 100);
-                portrandom+=random;
+                int rr = rnd.Next(1, 100);
+                portrandom+=rr;
                 server.Start(ipAddr, portrandom);
             }
             
             txtStatus.Text += "Server Start...";
             txtStatus.Text += "\r\n" + ipAddr+"port"+portrandom ;
-            QRcodeGenerater(ipAddr,portrandom);
-            privatekey = ReadPrivatekey();
+            publickey = ReadPublickey();
+            string index = publickey.Substring(publickey.IndexOf("<Modulus>") + 9, 5);
+            string random = GenerateRandom();
+            QRcodeGenerater(ipAddr,portrandom,index,random);
+            
             
             
         }
 
-        private string ReadPrivatekey()
+        private string ReadPublickey()
         {
-            String filename = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\privatekey.dat";
+            String filename = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\publickey.dat";
             Directory.CreateDirectory(Path.GetDirectoryName(filename));
             FileStream fStream = new FileStream(filename, FileMode.Open);
             byte[] decryptData = DecryptDataFromStream(entropy, DataProtectionScope.CurrentUser, fStream,2048);
-            String privatekey = Encoding.Default.GetString(decryptData);
-  //         txtStatus.Text += "\r\n key:" + privatekey;
-            return privatekey;
+            String publickey = Encoding.Default.GetString(decryptData);
+      //      txtStatus.Text += "\r\n key:" + publickey;
+            return publickey;
         }
 
         public static byte[] DecryptDataFromStream(byte[] Entropy, DataProtectionScope Scope, Stream S, int Length)
@@ -121,16 +124,12 @@ namespace KeyProviderTest
 
         }
 
-        private void QRcodeGenerater(IPAddress ip,int portrandom)
+        private void QRcodeGenerater(IPAddress ip,int portrandom,string index,string random)
         {
             MessagingToolkit.QRCode.Codec.QRCodeEncoder QREncoder = new MessagingToolkit.QRCode.Codec.QRCodeEncoder();
             String ipString;
             
-            ipString = "Lip:" + ip.ToString() + "port:"+portrandom;
-            
-
-
-                
+            ipString = "L"+index+"random:"+random+"ip:" + ip.ToString() + "port:"+portrandom;        
             // 2.大小
             QREncoder.QRCodeScale = 8;
 
@@ -149,53 +148,76 @@ namespace KeyProviderTest
         {
             txtStatus.Invoke((MethodInvoker)delegate ()
             {
-                if (e.MessageString == "123")
+                txtStatus.Text += "\r\nreceived:" + e.MessageString;
+                if(checkrandom(e.MessageString) == true)
                 {
-                    randomnumber = GenerateRandom();
-                    server.Broadcast(randombuffer);
-                    Message = e.MessageString;
-                    txtStatus.Text += "\r\nbroadcast: " + randomnumber;
-                }else
-                {
-  //                privatekey = ReadPrivatekey();
-                    txtStatus.Text += "\r\nreceived:" + e.MessageString+"\r\n length:"+System.Text.Encoding.Default.GetByteCount(e.MessageString);
-                    byte[] aa = Encoding.UTF8.GetBytes(e.MessageString);
-                    Boolean k = CheckRandom(e.MessageString);
-                    if (k == true)
-                        FingerPrintCheck = true;
-                    else
-                        FingerPrintCheck = false;
-                    Close();
+                    txtStatus.Text += "\r\n" +"true";
                 }
-                
-               // e.ReplyLine(string.Format("You Said: {0}",e.MessageString));
+                else
+                {
+                    txtStatus.Text += "\r\n" + "false";
+                }
             });
         }
 
+        private Boolean checkrandom(String received)
+        {
+            bool success = false;
+            byte[] bytesToVerify = Convert.FromBase64String(randomnumber);
+            byte[] signedBytes = Convert.FromBase64String(received);
+            RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
+            try
+            {
+                
+                rsa.FromXmlString(publickey);
 
-        private Boolean CheckRandom(String encryptrandom)
+                SHA256Managed Hash = new SHA256Managed();
+
+                byte[] hashedData = Hash.ComputeHash(signedBytes);
+
+                success = rsa.VerifyData(Encoding.UTF8.GetBytes(hashrandom(randomnumber)), new SHA256CryptoServiceProvider(), signedBytes);
+                
+            }
+            catch (CryptographicException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                rsa.PersistKeyInCsp = false;
+            }
+            return success;
+
+        }
+
+        private String hashrandom(String random)
+        {
+            SHA256 sha256 = new SHA256CryptoServiceProvider();
+            byte[] source = Encoding.Default.GetBytes(random);
+            byte[] crypto = sha256.ComputeHash(source);
+            string result = Convert.ToString(crypto);
+            txtStatus.Text += "\r\n random :"+random+"\r\nhash :" + result;
+            return result;
+        }
+
+        private String decryptrandom(String encryptedrandom)
         {
             RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
-            String decryptedrandom ="";
-            Boolean kkk = true;
-            rsa.FromXmlString(privatekey);
-            
-            try{
-                decryptedrandom = Encoding.UTF8.GetString(rsa.Decrypt(Convert.FromBase64String(encryptrandom), false));
+            String decryptedrandom = "";
+            rsa.FromXmlString(publickey);
+
+            try
+            {
+                decryptedrandom = Encoding.UTF8.GetString(rsa.Decrypt(Convert.FromBase64String(encryptedrandom), false));
                 txtStatus.Text += "\r\ndecrypted" + decryptedrandom;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                txtStatus.Text += "\r\nerror:" +e.ToString();
-            }      
-
-            if (decryptedrandom.Equals(randomnumber))
-                return true;
-            else
-                return false;
-            
-            
+                txtStatus.Text += "\r\nerror:" + e.ToString();
+            }
+            return decryptedrandom;      
         }
+
         private String GenerateRandom()
         {
             string s = "";
@@ -213,12 +235,8 @@ namespace KeyProviderTest
             return s;
         }
 
-        private void encrypt()
-        {
 
-        }
-
-
+            
         
     }
 }

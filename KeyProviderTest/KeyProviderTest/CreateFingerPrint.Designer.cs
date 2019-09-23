@@ -30,6 +30,7 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtStatus = new System.Windows.Forms.TextBox();
+            this.close = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,11 +50,22 @@
             this.txtStatus.Size = new System.Drawing.Size(644, 109);
             this.txtStatus.TabIndex = 3;
             // 
+            // close
+            // 
+            this.close.Location = new System.Drawing.Point(539, 32);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(75, 23);
+            this.close.TabIndex = 4;
+            this.close.Text = "關閉";
+            this.close.UseVisualStyleBackColor = true;
+            this.close.Click += new System.EventHandler(this.Close_Click);
+            // 
             // CreateFingerPrint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(680, 405);
+            this.Controls.Add(this.close);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.pictureBox1);
             this.Name = "CreateFingerPrint";
@@ -69,5 +81,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.Button close;
     }
 }

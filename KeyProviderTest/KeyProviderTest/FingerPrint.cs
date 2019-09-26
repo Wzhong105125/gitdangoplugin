@@ -87,7 +87,8 @@ namespace KeyProviderTest
             FileStream fStream = new FileStream(filename, FileMode.Open);
             byte[] decryptData = DecryptDataFromStream(entropy, DataProtectionScope.CurrentUser, fStream,2048);
             String publickey = Encoding.Default.GetString(decryptData);
-      //      txtStatus.Text += "\r\n key:" + publickey;
+            //      txtStatus.Text += "\r\n key:" + publickey;
+            fStream.Close();
             return publickey;
         }
 
@@ -152,10 +153,13 @@ namespace KeyProviderTest
                 if(checkrandom(e.MessageString) == true)
                 {
                     txtStatus.Text += "\r\n" +"true";
+                    FingerPrintCheck = true;
+                    Close();
                 }
                 else
                 {
                     txtStatus.Text += "\r\n" + "false";
+                    Close();
                 }
             });
         }
@@ -163,7 +167,7 @@ namespace KeyProviderTest
         private Boolean checkrandom(String received)
         {
             bool success = false;
-            byte[] bytesToVerify = Convert.FromBase64String(randomnumber);
+            byte[] bytesToVerify = Encoding.UTF8.GetBytes(randomnumber);
             byte[] signedBytes = Convert.FromBase64String(received);
             RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
             try
@@ -174,9 +178,9 @@ namespace KeyProviderTest
                 SHA256Managed Hash = new SHA256Managed();
 
                 byte[] hashedData = Hash.ComputeHash(signedBytes);
-
-                success = rsa.VerifyData(Encoding.UTF8.GetBytes(hashrandom(randomnumber)), new SHA256CryptoServiceProvider(), signedBytes);
                 
+                success = rsa.VerifyData(bytesToVerify, new SHA256CryptoServiceProvider(), signedBytes);
+                txtStatus.Text += "\r\nsuccess:"+success.ToString();
             }
             catch (CryptographicException e)
             {

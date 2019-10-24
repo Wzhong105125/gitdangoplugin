@@ -40,7 +40,7 @@ namespace KeyProviderTest
         private void CreateFingerPrint_Load(object sender, EventArgs e)
         {
             //創建rsa加密
-            RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
+            RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(2048);
             string publickey = rsa.ToXmlString(false);
             string privatekey = rsa.ToXmlString(true);
             string index = privatekey.Substring(privatekey.IndexOf("<Modulus>")+9, 5);

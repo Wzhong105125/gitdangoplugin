@@ -77,7 +77,6 @@ namespace KeyProviderTest
             QRcodeGenerater(ipAddr,portrandom,index,random);
             
             
-            
         }
 
         private string ReadPublickey()

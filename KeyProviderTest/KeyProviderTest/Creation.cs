@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Text;
 using System.Windows.Forms;
 using KeePassLib.Keys;
@@ -37,11 +38,28 @@ namespace KeyProviderTest.Forms
             }
             else
             {
+                WriteEmail();
                 m_Info.Secret = Encoding.UTF8.GetBytes(textBox1.Text);
                 Close();
             }
         }
 
+        private void WriteEmail() {
+            string path = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\email.txt";
+            if (!File.Exists(path))
+            {
+                File.Create(path);
+                TextWriter tw = new StreamWriter(path);
+                tw.WriteLine(email.Text.ToString());
+                tw.Close();
+            }
+            else if (File.Exists(path))
+            {
+                TextWriter tw = new StreamWriter(path);
+                tw.WriteLine(email.Text.ToString());
+                tw.Close();
+            }
+        }
         private void Creation_Load(object sender, EventArgs e)
         {
 

@@ -8,15 +8,25 @@
 	</Meta>
 	<Application>
 		<LanguageFile>Chinese_Traditional.lngx</LanguageFile>
-		<LastUpdateCheck>2019-09-26T02:48:56Z</LastUpdateCheck>
+		<LastUpdateCheck>2019-10-24T01:05:42Z</LastUpdateCheck>
 		<LastUsedFile>
-			<Path>test1.kdbx</Path>
+			<Path>Database.kdbx</Path>
 			<CredProtMode>Obf</CredProtMode>
 			<CredSaveMode>NoSave</CredSaveMode>
 		</LastUsedFile>
 		<MostRecentlyUsed>
 			<MaxItemCount>12</MaxItemCount>
 			<Items>
+				<ConnectionInfo>
+					<Path>Database.kdbx</Path>
+					<CredProtMode>Obf</CredProtMode>
+					<CredSaveMode>NoSave</CredSaveMode>
+				</ConnectionInfo>
+				<ConnectionInfo>
+					<Path>Database1.kdbx</Path>
+					<CredProtMode>Obf</CredProtMode>
+					<CredSaveMode>NoSave</CredSaveMode>
+				</ConnectionInfo>
 				<ConnectionInfo>
 					<Path>test1.kdbx</Path>
 					<CredProtMode>Obf</CredProtMode>
@@ -29,11 +39,6 @@
 				</ConnectionInfo>
 				<ConnectionInfo>
 					<Path>normal資料庫1.kdbx</Path>
-					<CredProtMode>Obf</CredProtMode>
-					<CredSaveMode>NoSave</CredSaveMode>
-				</ConnectionInfo>
-				<ConnectionInfo>
-					<Path>Database1.kdbx</Path>
 					<CredProtMode>Obf</CredProtMode>
 					<CredSaveMode>NoSave</CredSaveMode>
 				</ConnectionInfo>
@@ -58,6 +63,16 @@
 			<Triggers />
 		</TriggerSystem>
 		<PluginCompatibility>
+			<Item>@oqbugCqvRGF+AnO+jTXvRksBZYSs10KGOKXqq6vbLUg=@2.42.1.23464@1</Item>
+			<Item>@FVFw7CjswAk3YP0KMbEQbPgPWopITT8CwAZZ3CaYkBY=@2.42.1.23464@1</Item>
+			<Item>@k4wIUagBji+rUrIH07zQBFg0/AdwjyCOnbJVmBj5u2A=@2.42.1.23464@1</Item>
+			<Item>@6uCOu1XgUkRmDRo/zgO+94/uNhqqhDZl8JF650RXcLo=@2.42.1.23464@1</Item>
+			<Item>@ZAOdJz1LRSs5/smgDyETj1GNNV2IJPNWtXSO3ARZTCU=@2.42.1.23464@1</Item>
+			<Item>@rMEGZ4VM7KxqJ5PnBiq6ABEEBQfGAl5cUqiuZTvFwXg=@2.42.1.23464@1</Item>
+			<Item>@HZUpcy3GcqiducRl3+4rNeVWmf9J8fLg/DRVgbiSujA=@2.42.1.23464@1</Item>
+			<Item>@IablKxgQacEIlNmrgj70Q49FwNW9z24qTQwkAVucDdo=@2.42.1.23464@1</Item>
+			<Item>@dN+dHHHGTYrIFoe5B0jU5RQt7/4Tt4fwpaanVrW3jtk=@2.42.1.23464@1</Item>
+			<Item>@5l+IISSQ5OVH87MhEWpYhOV82nSYsmkLnWyF1PbHJNQ=@2.42.1.23464@1</Item>
 			<Item>@pvu56NOlLaXx7aeN82b8TpdrwShRDG1Cr9xjGn6sEqU=@2.42.1.23464@1</Item>
 			<Item>@LFOrnurKtnMAb/9SojMC1D5S5C3D3l5f8nEHjaKkiQw=@2.42.1.23464@1</Item>
 			<Item>@7iaE4XwF5g5d1ouKtOhIoPnB/L1AdSTo2/dW0F5VGxQ=@2.42.1.23464@1</Item>
@@ -112,16 +127,6 @@
 			<Item>@LvNVQLBvtuQj+dS/txRUXjH9Ys10OfQ7o6c+SayJi4o=@2.42.1.23464@1</Item>
 			<Item>@eAdeKDaTZcupfLieKRKsL94+87vUba6SOs95qcizE88=@2.42.1.23464@1</Item>
 			<Item>@TeImtSaSNTRM8xmOzVBMOVMthzV3EQ6/qS+isc5ATZ8=@2.42.1.23464@1</Item>
-			<Item>@iS9Yk2NjqYDUd4/YBFXNO3G5bNmFxJO5r+6jgbmeklE=@2.42.1.23464@1</Item>
-			<Item>@2QkhTYTxeCBOn/0N4C7BxPNK8ZqlShwrdSzxSuJ7tdo=@2.42.1.23464@1</Item>
-			<Item>@nz1WebL2GrG0s0/PJKxWWt891DJxizxIiUWouQlOG2c=@2.42.1.23464@1</Item>
-			<Item>@7lLtDkVaYrVeJ0gu3oOzzQcr/xfbHufiGFAp4uVPcaM=@2.42.1.23464@1</Item>
-			<Item>@t82TlgN7Bs6z7qS5Lj67+8Tr+oWsFByv8GLBkfrV/aQ=@2.42.1.23464@1</Item>
-			<Item>@USrYuRiWP0pD46jPnxaaof1wsQdnGck5V2hRM9lmY10=@2.42.1.23464@1</Item>
-			<Item>@8S1LW8yBV68vOmNlVB169O4dUvmrITDVgu566BaPJH8=@2.42.1.23464@1</Item>
-			<Item>@ZnMwCa+0RRyQh82wnYz7QBcEyRSbaykmCx0BqDiCrBc=@2.42.1.23464@1</Item>
-			<Item>@2u5CaGMkrh80S/rSQwbcuhdobVUKLeNYKZC5LzN85Gc=@2.42.1.23464@1</Item>
-			<Item>@3hpAJxO6b+S8mre9N/p7Gm6JE3ITF0sCKAaaSESEX50=@2.42.1.23464@1</Item>
 		</PluginCompatibility>
 	</Application>
 	<Logging />
@@ -242,6 +247,10 @@
 			</Association>
 			<Association>
 				<DatabasePath>test1.kdbx</DatabasePath>
+				<KeyProvider>DangoPass</KeyProvider>
+			</Association>
+			<Association>
+				<DatabasePath>Database.kdbx</DatabasePath>
 				<KeyProvider>DangoPass</KeyProvider>
 			</Association>
 		</KeySources>

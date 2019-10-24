@@ -14,11 +14,13 @@ using KeePassLib.Keys;
 using KeePassLib.Utility;
 using KeePassLib.Serialization;
 using KeyProviderTest.Forms;
+using System.Threading;
+using System.Net.Mail;
 /*
-    pictureBox 1~36為第一個鍵盤
-    pictureBox 37~72為第二個鍵盤
-    pictureBox 73~108為認證系統之格
- */
+pictureBox 1~36為第一個鍵盤
+pictureBox 37~72為第二個鍵盤
+pictureBox 73~108為認證系統之格
+*/
 namespace KeyProviderTest
 {
     public partial class DangoLite : Form
@@ -39,6 +41,9 @@ namespace KeyProviderTest
        
         private Info m_Info = null;
         private KeyProviderQueryContext m_kpContext = null;
+
+        private String mailbody;
+        private int counter = 0;
         public void InitEx(Info Info, KeyProviderQueryContext ctx)
         {
 
@@ -400,6 +405,10 @@ namespace KeyProviderTest
                     else if (!check && WhichRound == 1)
                     {
                         MessageBox.Show("Wrong Password");
+                        counter++;
+                        Thread threadmail = new Thread(new ThreadStart(sendmail));
+                        threadmail.Start();
+                        
                         for (int i = 0; i < 4; i++)//清空色彩數目
                         {
                             color[i] = 0;
@@ -506,6 +515,42 @@ namespace KeyProviderTest
             dlg.ShowDialog();
         }
 
-   
+        private void sendmail()
+        {
+            try
+            {
+                mailbody_write();
+                System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
+                msg.To.Add("qaz90014@gmail.com");
+                msg.From = new MailAddress("ACS105125@gm.ntcu.edu.tw", "NTCU_DangoPass", System.Text.Encoding.UTF8);
+                msg.Subject = "資料庫開啟通知";//郵件標題
+                msg.SubjectEncoding = System.Text.Encoding.UTF8;//郵件標題編碼
+                msg.Body = mailbody; //郵件內容
+                msg.BodyEncoding = System.Text.Encoding.UTF8;//郵件內容編碼 
+                                                             //              msg.Attachments.Add(new Attachment(@"D:\test2.docx"));  //附件
+                msg.IsBodyHtml = false;//是否是HTML郵件 
+                                       //msg.Priority = MailPriority.High;//郵件優先級 
+
+                SmtpClient client = new SmtpClient();
+                client.Credentials = new System.Net.NetworkCredential("ACS105125@gm.ntcu.edu.tw", "wzhong210512"); //這裡要填正確的帳號跟密碼
+                client.Host = "smtp.gmail.com"; //設定smtp Server
+                client.Port = 587; //設定Port
+                client.EnableSsl = true; //gmail預設開啟驗證
+                client.Send(msg); //寄出信件
+                client.Dispose();
+                msg.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, ex.Message);
+            }
+        }
+
+        private void mailbody_write()
+        {
+            String username = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+            mailbody = "UserName:" + Environment.UserName + "\r\nTime:" + DateTime.Now.ToString() + "\r\nDataBase:" + System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\r\nFail:" + counter;
+        }
+
     }
 }

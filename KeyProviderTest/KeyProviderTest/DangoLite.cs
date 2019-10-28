@@ -514,14 +514,22 @@ namespace KeyProviderTest
             help dlg = new help();
             dlg.ShowDialog();
         }
-
+        private String readmailaddress()
+        {
+            String mail = "";
+            string path = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\email.txt";
+            mail = System.IO.File.ReadAllText(path);
+            //          MessageBox.Show(this,mail.ToString());
+            return mail;
+        }
         private void sendmail()
         {
             try
             {
+                String mail = readmailaddress();
                 mailbody_write();
                 System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
-                msg.To.Add("qaz90014@gmail.com");
+                msg.To.Add(mail);
                 msg.From = new MailAddress("ACS105125@gm.ntcu.edu.tw", "NTCU_DangoPass", System.Text.Encoding.UTF8);
                 msg.Subject = "資料庫開啟通知";//郵件標題
                 msg.SubjectEncoding = System.Text.Encoding.UTF8;//郵件標題編碼
@@ -532,7 +540,7 @@ namespace KeyProviderTest
                                        //msg.Priority = MailPriority.High;//郵件優先級 
 
                 SmtpClient client = new SmtpClient();
-                client.Credentials = new System.Net.NetworkCredential("ACS105125@gm.ntcu.edu.tw", "wzhong210512"); //這裡要填正確的帳號跟密碼
+                client.Credentials = new System.Net.NetworkCredential("123mail", "123"); //這裡要填正確的帳號跟密碼
                 client.Host = "smtp.gmail.com"; //設定smtp Server
                 client.Port = 587; //設定Port
                 client.EnableSsl = true; //gmail預設開啟驗證

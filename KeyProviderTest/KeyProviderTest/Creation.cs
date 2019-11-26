@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
+using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
 using KeePassLib.Keys;
@@ -40,10 +41,33 @@ namespace KeyProviderTest.Forms
             {
                 WriteEmail();
                 m_Info.Secret = Encoding.UTF8.GetBytes(textBox1.Text);
+                //m_Info.Secret = Encoding.UTF8.GetBytes(EnCode(textBox1.Text.ToString()));
                 Close();
             }
         }
+        public string EnCode(string EnString)  //將字串加密
+        {
+            byte[] Key = { 123, 123, 123, 123, 123, 123, 123, 123 };
+            byte[] IV = { 123, 123, 123, 123, 123, 123, 123, 123 };
 
+            byte[] b = Encoding.UTF8.GetBytes(EnString);
+
+            DESCryptoServiceProvider des = new DESCryptoServiceProvider();
+            ICryptoTransform ict = des.CreateEncryptor(Key, IV);
+            byte[] outData = ict.TransformFinalBlock(b, 0, b.Length);
+            return Convert.ToBase64String(outData);  //回傳加密後的字串
+        }
+
+        public string DeCode(string DeString) //將字串解密
+        {
+            byte[] Key = { 123, 123, 123, 123, 123, 123, 123, 123 };
+            byte[] IV = { 123, 123, 123, 123, 123, 123, 123, 123 };
+            byte[] b = Convert.FromBase64String(DeString);
+            DESCryptoServiceProvider des = new DESCryptoServiceProvider();
+            ICryptoTransform ict = des.CreateDecryptor(Key, IV);
+            byte[] outData = ict.TransformFinalBlock(b, 0, b.Length);
+            return Encoding.UTF8.GetString(outData);//回傳解密後的字串
+        }
         private void WriteEmail() {
             string path = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\email.txt";
             if (!File.Exists(path))

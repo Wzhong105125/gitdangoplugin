@@ -7,6 +7,8 @@ using KeePassLib.Keys;
 using KeePassLib.Utility;
 using KeePassLib.Serialization;
 using KeyProviderTest.Forms;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace KeyProviderTest
 {
@@ -97,8 +99,10 @@ namespace KeyProviderTest
             
             UIUtil.ShowDialogAndDestroy(dlge);
             if (!CreateAuxFile(Info, ctx)) return null;
-            
+            SampleKeyProvider sm = new SampleKeyProvider();
+
             return Info.Secret;
+            //return Encoding.UTF8.GetBytes(sm.DeCode(Info.Secret.ToString()));
         }
         private static bool CreateAuxFile(Info Info,
             KeyProviderQueryContext ctx)
@@ -208,9 +212,31 @@ namespace KeyProviderTest
             return null;
 
         }
-        
-        
-       
-       
-     }
+
+        public string EnCode(string EnString)  //將字串加密
+        {
+            byte[] Key = { 123, 123, 123, 123, 123, 123, 123, 123 };
+            byte[] IV = { 123, 123, 123, 123, 123, 123, 123, 123 };
+
+            byte[] b  = Encoding.UTF8.GetBytes(EnString);
+
+            DESCryptoServiceProvider des = new DESCryptoServiceProvider();
+            ICryptoTransform ict = des.CreateEncryptor(Key, IV);
+            byte[] outData = ict.TransformFinalBlock(b, 0, b.Length);
+            return Convert.ToBase64String(outData);  //回傳加密後的字串
+        }
+
+        public string DeCode(string DeString) //將字串解密
+        {
+            byte[] Key = { 123, 123, 123, 123, 123, 123, 123, 123 };
+            byte[] IV = { 123, 123, 123, 123, 123, 123, 123, 123 };
+            byte[] b = Convert.FromBase64String(DeString);
+            DESCryptoServiceProvider des = new DESCryptoServiceProvider();
+            ICryptoTransform ict = des.CreateDecryptor(Key, IV);
+            byte[] outData = ict.TransformFinalBlock(b, 0, b.Length);
+            return Encoding.UTF8.GetString(outData);//回傳解密後的字串
+        }
+
+
+    }
 }

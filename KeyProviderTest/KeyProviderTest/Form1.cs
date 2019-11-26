@@ -540,7 +540,7 @@ namespace KeyProviderTest
                 mailbody_write();
                 System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
                 msg.To.Add(mail);
-                msg.From = new MailAddress("ACS105125@gm.ntcu.edu.tw", "NTCU_DangoPass", System.Text.Encoding.UTF8);
+                msg.From = new MailAddress("NTCU.DangoPass@gmail.com", "NTCU_DangoPass", System.Text.Encoding.UTF8);
                 msg.Subject = "資料庫開啟通知";//郵件標題
                 msg.SubjectEncoding = System.Text.Encoding.UTF8;//郵件標題編碼
                 msg.Body = mailbody; //郵件內容
@@ -550,7 +550,7 @@ namespace KeyProviderTest
                                        //msg.Priority = MailPriority.High;//郵件優先級 
 
                 SmtpClient client = new SmtpClient();
-                client.Credentials = new System.Net.NetworkCredential("123mail", "123"); //這裡要填正確的帳號跟密碼
+                client.Credentials = new System.Net.NetworkCredential("NTCU.DangoPass@gmail.com", "Sec@Lab_3160"); //這裡要填正確的帳號跟密碼
                 client.Host = "smtp.gmail.com"; //設定smtp Server
                 client.Port = 587; //設定Port
                 client.EnableSsl = true; //gmail預設開啟驗證

@@ -16,6 +16,7 @@ using KeePassLib.Serialization;
 using KeyProviderTest.Forms;
 using System.Threading;
 using System.Net.Mail;
+using System.Security.Cryptography;
 /*
 pictureBox 1~36為第一個鍵盤
 pictureBox 37~72為第二個鍵盤
@@ -57,6 +58,28 @@ namespace KeyProviderTest
             }           
             //GetPassQ(Pass);
 
+        }
+        public string EnCode(string EnString)  //將字串加密
+        {
+            byte[] Key = { 123, 123, 123, 123, 123, 123, 123, 123 };
+            byte[] IV = { 123, 123, 123, 123, 123, 123, 123, 123 };
+
+            byte[] b = Encoding.UTF8.GetBytes(EnString);
+
+            DESCryptoServiceProvider des = new DESCryptoServiceProvider();
+            ICryptoTransform ict = des.CreateEncryptor(Key, IV);
+            byte[] outData = ict.TransformFinalBlock(b, 0, b.Length);
+            return Convert.ToBase64String(outData);  //回傳加密後的字串
+        }
+        public string DeCode(string DeString) //將字串解密
+        {
+            byte[] Key = { 123, 123, 123, 123, 123, 123, 123, 123 };
+            byte[] IV = { 123, 123, 123, 123, 123, 123, 123, 123 };
+            byte[] b = Convert.FromBase64String(DeString);
+            DESCryptoServiceProvider des = new DESCryptoServiceProvider();
+            ICryptoTransform ict = des.CreateDecryptor(Key, IV);
+            byte[] outData = ict.TransformFinalBlock(b, 0, b.Length);
+            return Encoding.UTF8.GetString(outData);//回傳解密後的字串
         }
 
         public Boolean Access()
@@ -530,7 +553,7 @@ namespace KeyProviderTest
                 mailbody_write();
                 System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
                 msg.To.Add(mail);
-                msg.From = new MailAddress("ACS105125@gm.ntcu.edu.tw", "NTCU_DangoPass", System.Text.Encoding.UTF8);
+                msg.From = new MailAddress("NTCU.DangoPass@gmail.com", "NTCU_DangoPass", System.Text.Encoding.UTF8);
                 msg.Subject = "資料庫開啟通知";//郵件標題
                 msg.SubjectEncoding = System.Text.Encoding.UTF8;//郵件標題編碼
                 msg.Body = mailbody; //郵件內容
@@ -540,7 +563,7 @@ namespace KeyProviderTest
                                        //msg.Priority = MailPriority.High;//郵件優先級 
 
                 SmtpClient client = new SmtpClient();
-                client.Credentials = new System.Net.NetworkCredential("123mail", "123"); //這裡要填正確的帳號跟密碼
+                client.Credentials = new System.Net.NetworkCredential("NTCU.DangoPass@gmail.com", "Sec@Lab_3160"); //這裡要填正確的帳號跟密碼
                 client.Host = "smtp.gmail.com"; //設定smtp Server
                 client.Port = 587; //設定Port
                 client.EnableSsl = true; //gmail預設開啟驗證

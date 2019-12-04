@@ -1,0 +1,13 @@
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\bin\Debug\KeyProviderTest.dll
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\bin\Debug\KeyProviderTest.pdb
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\bin\Debug\KeePass.exe.config
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\bin\Debug\KeePass.XmlSerializers.dll
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\DangoPass.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.DirectOrDango.resources
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.Form1.resources
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.Forms.Login.resources
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.Forms.Creation.resources
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.Properties.Resources.resources
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\DangoPass.csproj.GenerateResource.Cache
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.dll
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.pdb

@@ -1,0 +1,74 @@
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.DirectOrDango.resources
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.Form1.resources
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.Forms.Creation.resources
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.Properties.Resources.resources
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.csproj.GenerateResource.Cache
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\bin\Release\KeyProviderTest.dll
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\bin\Release\KeyProviderTest.pdb
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\bin\Release\KeePass.exe
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\bin\Release\KeePass.exe.config
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\bin\Release\KeePass.XmlSerializers.dll
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.dll
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.pdb
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.Login.resources
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.Form2.resources
+C:\Users\user\Desktop\專題進度\DangoPlugin\KeyProviderTest\KeyProviderTest\bin\Release\KeyProviderTest.dll
+C:\Users\user\Desktop\專題進度\DangoPlugin\KeyProviderTest\KeyProviderTest\bin\Release\KeyProviderTest.pdb
+C:\Users\user\Desktop\專題進度\DangoPlugin\KeyProviderTest\KeyProviderTest\bin\Release\KeePass.exe.config
+C:\Users\user\Desktop\專題進度\DangoPlugin\KeyProviderTest\KeyProviderTest\bin\Release\KeePass.XmlSerializers.dll
+C:\Users\user\Desktop\專題進度\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.csprojAssemblyReference.cache
+C:\Users\user\Desktop\專題進度\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.DirectOrDango.resources
+C:\Users\user\Desktop\專題進度\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.Form1.resources
+C:\Users\user\Desktop\專題進度\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.Forms.Creation.resources
+C:\Users\user\Desktop\專題進度\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.Form2.resources
+C:\Users\user\Desktop\專題進度\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.help.resources
+C:\Users\user\Desktop\專題進度\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.Login.resources
+C:\Users\user\Desktop\專題進度\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.Properties.Resources.resources
+C:\Users\user\Desktop\專題進度\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.csproj.GenerateResource.cache
+C:\Users\user\Desktop\專題進度\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\專題進度\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.csproj.CopyComplete
+C:\Users\user\Desktop\專題進度\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.dll
+C:\Users\user\Desktop\專題進度\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.pdb
+D:\ACS105125資料\專題\C# 學習\DangoPlugin\KeyProviderTest\KeyProviderTest\bin\Release\KeyProviderTest.dll
+D:\ACS105125資料\專題\C# 學習\DangoPlugin\KeyProviderTest\KeyProviderTest\bin\Release\KeyProviderTest.pdb
+D:\ACS105125資料\專題\C# 學習\DangoPlugin\KeyProviderTest\KeyProviderTest\bin\Release\KeePass.exe.config
+D:\ACS105125資料\專題\C# 學習\DangoPlugin\KeyProviderTest\KeyProviderTest\bin\Release\KeePass.XmlSerializers.dll
+D:\ACS105125資料\專題\C# 學習\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.csprojAssemblyReference.cache
+D:\ACS105125資料\專題\C# 學習\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.DirectOrDango.resources
+D:\ACS105125資料\專題\C# 學習\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.Form1.resources
+D:\ACS105125資料\專題\C# 學習\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.Forms.Creation.resources
+D:\ACS105125資料\專題\C# 學習\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.Form2.resources
+D:\ACS105125資料\專題\C# 學習\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.Form3.resources
+D:\ACS105125資料\專題\C# 學習\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.help.resources
+D:\ACS105125資料\專題\C# 學習\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.Login.resources
+D:\ACS105125資料\專題\C# 學習\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.Properties.Resources.resources
+D:\ACS105125資料\專題\C# 學習\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.csproj.GenerateResource.cache
+D:\ACS105125資料\專題\C# 學習\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.csproj.CoreCompileInputs.cache
+D:\ACS105125資料\專題\C# 學習\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.csproj.CopyComplete
+D:\ACS105125資料\專題\C# 學習\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.dll
+D:\ACS105125資料\專題\C# 學習\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.pdb
+D:\ACS105125資料\專題\C# 學習\DangoPlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.DangoLite.resources
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\bin\Release\KeyProviderTest.dll
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\bin\Release\KeyProviderTest.pdb
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\bin\Release\KeePass.exe.config
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\bin\Release\KeePass.XmlSerializers.dll
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.csprojAssemblyReference.cache
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.DirectOrDango.resources
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.DangoLite.resources
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.Form1.resources
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.Forms.Creation.resources
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.Form2.resources
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.Form3.resources
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.help.resources
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.Login.resources
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.Properties.Resources.resources
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.csproj.GenerateResource.cache
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.csproj.CoreCompileInputs.cache
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.csproj.CopyComplete
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.dll
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.pdb
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.FingerPrint.resources
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\bin\Release\SimpleTCP.dll
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\bin\Release\MessagingToolkit.QRCode.dll
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Release\KeyProviderTest.CreateFingerPrint.resources

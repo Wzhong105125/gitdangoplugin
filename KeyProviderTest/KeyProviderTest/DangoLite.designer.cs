@@ -2409,7 +2409,7 @@
             this.MaximizeBox = false;
             this.Name = "DangoLite";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Text = "DangoPass";
+            this.Text = "DangoPass v2.0";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DangoLite_KeyDown_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox109)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Arrow1)).EndInit();

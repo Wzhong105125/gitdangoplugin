@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateFingerPrint));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.close = new System.Windows.Forms.Button();
@@ -49,6 +50,7 @@
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(644, 109);
             this.txtStatus.TabIndex = 3;
+            this.txtStatus.Visible = false;
             // 
             // close
             // 
@@ -64,12 +66,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 405);
+            this.ClientSize = new System.Drawing.Size(680, 262);
             this.Controls.Add(this.close);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CreateFingerPrint";
-            this.Text = "CreateFingerPrint";
+            this.Text = "DangoPass v2.0";
             this.Load += new System.EventHandler(this.CreateFingerPrint_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

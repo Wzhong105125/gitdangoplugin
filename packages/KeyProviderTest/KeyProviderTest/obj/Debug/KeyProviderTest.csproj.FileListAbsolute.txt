@@ -1,0 +1,77 @@
+C:\Users\Admin\Desktop\test\test2\KeyProviderTest\KeyProviderTest\bin\Debug\KeyProviderTest.dll
+C:\Users\Admin\Desktop\test\test2\KeyProviderTest\KeyProviderTest\bin\Debug\KeyProviderTest.pdb
+C:\Users\Admin\Desktop\test\test2\KeyProviderTest\KeyProviderTest\bin\Debug\KeePass.exe
+C:\Users\Admin\Desktop\test\test2\KeyProviderTest\KeyProviderTest\bin\Debug\KeePass.exe.config
+C:\Users\Admin\Desktop\test\test2\KeyProviderTest\KeyProviderTest\bin\Debug\KeePass.XmlSerializers.dll
+C:\Users\Admin\Desktop\test\test2\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\test\test2\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.Forms.Form1.resources
+C:\Users\Admin\Desktop\test\test2\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.csproj.GenerateResource.Cache
+C:\Users\Admin\Desktop\test\test2\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.dll
+C:\Users\Admin\Desktop\test\test2\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.pdb
+C:\Users\jerry\OneDrive\桌面\test\test2\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.csprojAssemblyReference.cache
+C:\Users\jerry\OneDrive\桌面\test\test2\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.Forms.Login.resources
+C:\Users\jerry\OneDrive\桌面\test\test2\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.Forms.Creation.resources
+C:\Users\jerry\OneDrive\桌面\test\test2\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.csproj.GenerateResource.cache
+C:\Users\jerry\OneDrive\桌面\test\test2\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.csproj.CoreCompileInputs.cache
+C:\Users\jerry\OneDrive\桌面\test\test2\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.dll
+C:\Users\jerry\OneDrive\桌面\test\test2\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.pdb
+C:\Users\jerry\OneDrive\桌面\test\test2\KeyProviderTest\KeyProviderTest\bin\Debug\KeyProviderTest.dll
+C:\Users\jerry\OneDrive\桌面\test\test2\KeyProviderTest\KeyProviderTest\bin\Debug\KeyProviderTest.pdb
+C:\Users\jerry\OneDrive\桌面\test\test2\KeyProviderTest\KeyProviderTest\bin\Debug\KeePass.exe
+C:\Users\jerry\OneDrive\桌面\test\test2\KeyProviderTest\KeyProviderTest\bin\Debug\KeePass.exe.config
+C:\Users\jerry\OneDrive\桌面\test\test2\KeyProviderTest\KeyProviderTest\bin\Debug\KeePass.XmlSerializers.dll
+C:\Users\jerry\OneDrive\桌面\test\test2\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.csproj.CopyComplete
+C:\Users\Admin\Desktop\test\loginplugin-master\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\test\loginplugin-master\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.Forms.Login.resources
+C:\Users\Admin\Desktop\test\loginplugin-master\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.Forms.Creation.resources
+C:\Users\Admin\Desktop\test\loginplugin-master\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.csproj.GenerateResource.Cache
+C:\Users\Admin\Desktop\test\loginplugin-master\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.dll
+C:\Users\Admin\Desktop\test\loginplugin-master\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.pdb
+C:\Users\Admin\Desktop\test\loginplugin-master\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.Form1.resources
+C:\Users\Admin\Desktop\test\loginplugin-master\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.Properties.Resources.resources
+C:\Users\Admin\Desktop\test\loginplugin-master\loginplugin-master\KeyProviderTest\KeyProviderTest\bin\Debug\KeyProviderTest.dll
+C:\Users\Admin\Desktop\test\loginplugin-master\loginplugin-master\KeyProviderTest\KeyProviderTest\bin\Debug\KeyProviderTest.pdb
+C:\Users\Admin\Desktop\test\loginplugin-master\loginplugin-master\KeyProviderTest\KeyProviderTest\bin\Debug\KeePass.exe.config
+C:\Users\Admin\Desktop\test\loginplugin-master\loginplugin-master\KeyProviderTest\KeyProviderTest\bin\Debug\KeePass.XmlSerializers.dll
+C:\Users\user\Desktop\loginplugin-master\KeyProviderTest\KeyProviderTest\bin\Debug\KeyProviderTest.dll
+C:\Users\user\Desktop\loginplugin-master\KeyProviderTest\KeyProviderTest\bin\Debug\KeyProviderTest.pdb
+C:\Users\user\Desktop\loginplugin-master\KeyProviderTest\KeyProviderTest\bin\Debug\KeePass.exe.config
+C:\Users\user\Desktop\loginplugin-master\KeyProviderTest\KeyProviderTest\bin\Debug\KeePass.XmlSerializers.dll
+C:\Users\user\Desktop\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.csprojAssemblyReference.cache
+C:\Users\user\Desktop\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.Form1.resources
+C:\Users\user\Desktop\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.Forms.Login.resources
+C:\Users\user\Desktop\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.Forms.Creation.resources
+C:\Users\user\Desktop\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.Properties.Resources.resources
+C:\Users\user\Desktop\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.csproj.GenerateResource.cache
+C:\Users\user\Desktop\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.csproj.CopyComplete
+C:\Users\user\Desktop\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.dll
+C:\Users\user\Desktop\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.pdb
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\bin\Debug\KeyProviderTest.dll
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\bin\Debug\KeyProviderTest.pdb
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.DirectOrDango.resources
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.Form1.resources
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.Forms.Creation.resources
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.Properties.Resources.resources
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.csproj.GenerateResource.Cache
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.dll
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.pdb
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.Forms.Login.resources
+C:\Users\Admin\Desktop\test\new keepass\loginplugin-master\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.csprojResolveAssemblyReference.cache
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\bin\Debug\KeyProviderTest.dll
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\bin\Debug\KeyProviderTest.pdb
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.csprojAssemblyReference.cache
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.DirectOrDango.resources
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.DangoLite.resources
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.Form1.resources
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.Forms.Creation.resources
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.Form2.resources
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.Form3.resources
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.help.resources
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.Login.resources
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.Properties.Resources.resources
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.csproj.GenerateResource.cache
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.csproj.CoreCompileInputs.cache
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.csproj.CopyComplete
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.dll
+D:\ACS105125Data\專題\C# 學習\DangoLitePlugin\KeyProviderTest\KeyProviderTest\obj\Debug\KeyProviderTest.pdb

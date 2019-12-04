@@ -105,7 +105,7 @@
             this.Icon = global::KeyProviderTest.Properties.Resources.DangoLOGO1;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Login";
-            this.Text = "DangoPass";
+            this.Text = "DangoPass v2.0";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

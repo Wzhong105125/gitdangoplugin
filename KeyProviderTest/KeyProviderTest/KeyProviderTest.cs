@@ -41,7 +41,7 @@ namespace KeyProviderTest
         
         public override string Name
         {
-            get { return "DangoPass"; }
+            get { return "DangoPass v2.0"; }
         }
         
         
